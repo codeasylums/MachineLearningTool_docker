@@ -1,0 +1,13 @@
+version: '2.0'
+
+services:
+ 
+  vscode:
+    image: jupyter/base-notebook
+    ports:
+    - 8888:8888
+    environment: 
+    - JUPYTER_TOKEN=summercodeasylums
+    volumes:
+    - ./work:/home/jovyan/work:rw
+    container_name: jupyter
